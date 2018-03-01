@@ -1,0 +1,194 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/eagle"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.android.ebmengineering.MainActivity">
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#32d25d"
+            android:text="EBM Engineering"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+
+        <Spinner
+            android:id="@+id/course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/course_option"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/border"
+            android:layout_below="@+id/title"
+            android:singleLine="true" />
+
+
+
+
+        <EditText
+            android:id="@+id/FirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:hint="Enter your first name "
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+
+        <EditText
+            android:id="@+id/LastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/FirstName"
+            android:hint="Your Last Name"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+
+        <EditText
+            android:id="@+id/LevelofEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LastName"
+            android:hint="Level Of Education"
+            android:inputType="textNoSuggestions"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+
+        <EditText
+            android:id="@+id/ContactInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LevelofEducation"
+            android:hint="Contact Information"
+            android:inputType="textNoSuggestions"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+
+        <EditText
+            android:id="@+id/EnterYourEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ContactInformation"
+            android:hint="Enter Your Email"
+            android:inputType="textNoSuggestions"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+
+        <EditText
+            android:id="@+id/ConfirmyourlEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EnterYourEmail"
+            android:hint="Confirm Your Email"
+            android:inputType="textNoSuggestions"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+
+        <EditText
+            android:id="@+id/InputYourPhonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ConfirmyourlEmail"
+            android:hint="Input Your Phone Number"
+            android:inputType="textNoSuggestions"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/InputYourCountryCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/InputYourPhonenumber"
+            android:hint="Input Your Country Code"
+            android:inputType="textNoSuggestions"
+            android:textSize="24sp"
+            android:background="@drawable/border"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+
+        <Spinner
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/country_arrays"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/border"
+            android:layout_below="@+id/InputYourCountryCode"
+            android:singleLine="true" />
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff00ff00"
+            android:onClick="btnSubmit"
+            android:text="Submit"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/country" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btnSubmit" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
